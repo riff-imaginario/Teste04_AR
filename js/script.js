@@ -1,16 +1,17 @@
 AFRAME.registerComponent('my-event', {
     init: function () {
-        var marker = this.el;
+        let marker01 = document.querySelector('#marker01');
+        let marker02 = document.querySelector('#marker02');
 
-        let scenelEl = document.querySelector('a-scene');
-        let titleText = document.querySelector('#title');
-        let showMenu = document.querySelector('#button');
-        let showID = document.querySelector('#btnShowID');
-        let menu = document.querySelector('#menu');
-        let line = document.querySelector('#line');
+        let scenelEl           = document.querySelector('a-scene');
+        let titleText          = document.querySelector('#title');
+        let showMenu           = document.querySelector('#button');
+        let showID             = document.querySelector('#btnShowID');
+        let menu               = document.querySelector('#menu');
+        let line               = document.querySelector('#line');
         let wireFrameDescPanel = document.querySelector('#panelDescription');
-        let descPanel = document.querySelector('#panelFace');
-        let txtDescID = document.querySelector('#txtDescription');
+        let descPanel          = document.querySelector('#panelFace');
+        let txtDescID          = document.querySelector('#txtDescription');
 
         /*
         showMenu.addEventListener('click', function () {
@@ -24,7 +25,7 @@ AFRAME.registerComponent('my-event', {
         });
         */
 
-        marker.addEventListener('markerFound', function() {
+        marker01.addEventListener('markerFound', function() {
             menu.setAttribute('visible', true);
         });
 
